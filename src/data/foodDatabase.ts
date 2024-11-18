@@ -1,0 +1,306 @@
+// First, create a food database
+export interface FoodItem {
+  name: string;
+  calories: number;  // per 100g
+  protein: number;   // per 100g
+  carbs: number;    // per 100g
+  fats: number;     // per 100g
+}
+
+export const foodDatabase: FoodItem[] = [
+    // Existing items
+    {
+      name: "Chicken Breast",
+      calories: 165,
+      protein: 31,
+      carbs: 0,
+      fats: 3.6,
+    },
+    {
+      name: "White Rice (Cooked)",
+      calories: 130,
+      protein: 2.7,
+      carbs: 28,
+      fats: 0.3,
+    },
+    {
+      name: "Egg",
+      calories: 155,
+      protein: 13,
+      carbs: 1.1,
+      fats: 11,
+    },
+    {
+      name: "Oatmeal",
+      calories: 389,
+      protein: 16.9,
+      carbs: 66.3,
+      fats: 6.9,
+    },
+    {
+      name: "Banana",
+      calories: 89,
+      protein: 1.1,
+      carbs: 22.8,
+      fats: 0.3,
+    },
+    // Meat and Fish
+    {
+      name: "Salmon",
+      calories: 208,
+      protein: 20,
+      carbs: 0,
+      fats: 13,
+    },
+    {
+      name: "Ground Beef (80% lean)",
+      calories: 254,
+      protein: 26,
+      carbs: 0,
+      fats: 17,
+    },
+    {
+      name: "Turkey Breast",
+      calories: 135,
+      protein: 30,
+      carbs: 0,
+      fats: 1,
+    },
+    {
+      name: "Tilapia",
+      calories: 129,
+      protein: 26,
+      carbs: 0,
+      fats: 2.7,
+    },
+    {
+      name: "Pork Chop",
+      calories: 196,
+      protein: 25,
+      carbs: 0,
+      fats: 10,
+    },
+    {
+      name: "Shrimp (Cooked)",
+      calories: 99,
+      protein: 24,
+      carbs: 0,
+      fats: 0.3,
+    },
+    {
+      name: "Tuna (Canned, in Water)",
+      calories: 116,
+      protein: 25,
+      carbs: 0,
+      fats: 0.8,
+    },
+    // Vegetables
+    {
+      name: "Broccoli",
+      calories: 55,
+      protein: 3.7,
+      carbs: 11.2,
+      fats: 0.6,
+    },
+    {
+      name: "Spinach",
+      calories: 23,
+      protein: 2.9,
+      carbs: 3.6,
+      fats: 0.4,
+    },
+    {
+      name: "Carrot",
+      calories: 41,
+      protein: 0.9,
+      carbs: 9.6,
+      fats: 0.2,
+    },
+    {
+      name: "Green Beans",
+      calories: 31,
+      protein: 1.8,
+      carbs: 7,
+      fats: 0.1,
+    },
+    {
+      name: "Cauliflower",
+      calories: 25,
+      protein: 1.9,
+      carbs: 5,
+      fats: 0.3,
+    },
+    {
+      name: "Kale",
+      calories: 49,
+      protein: 4.3,
+      carbs: 8.8,
+      fats: 0.9,
+    },
+    {
+      name: "Zucchini",
+      calories: 17,
+      protein: 1.2,
+      carbs: 3.1,
+      fats: 0.3,
+    },
+    {
+      name: "Sweet Potato",
+      calories: 86,
+      protein: 1.6,
+      carbs: 20.1,
+      fats: 0.1,
+    },
+    // Fruits
+    {
+      name: "Apple",
+      calories: 52,
+      protein: 0.3,
+      carbs: 13.8,
+      fats: 0.2,
+    },
+    {
+      name: "Strawberries",
+      calories: 32,
+      protein: 0.7,
+      carbs: 7.7,
+      fats: 0.3,
+    },
+    {
+      name: "Blueberries",
+      calories: 57,
+      protein: 0.7,
+      carbs: 14.5,
+      fats: 0.3,
+    },
+    {
+      name: "Grapes",
+      calories: 69,
+      protein: 0.7,
+      carbs: 18.1,
+      fats: 0.2,
+    },
+    {
+      name: "Pineapple",
+      calories: 50,
+      protein: 0.5,
+      carbs: 13.1,
+      fats: 0.1,
+    },
+    {
+      name: "Avocado",
+      calories: 160,
+      protein: 2,
+      carbs: 8.5,
+      fats: 14.7,
+    },
+    {
+      name: "Mango",
+      calories: 60,
+      protein: 0.8,
+      carbs: 14.9,
+      fats: 0.4,
+    },
+    {
+      name: "Watermelon",
+      calories: 30,
+      protein: 0.6,
+      carbs: 7.6,
+      fats: 0.2,
+    },
+    {
+      name: "Orange",
+      calories: 47,
+      protein: 0.9,
+      carbs: 11.8,
+      fats: 0.1,
+    },
+    // Dairy
+    {
+      name: "Milk (Whole)",
+      calories: 61,
+      protein: 3.2,
+      carbs: 4.8,
+      fats: 3.3,
+    },
+    {
+      name: "Milk (Skim)",
+      calories: 34,
+      protein: 3.4,
+      carbs: 5,
+      fats: 0.1,
+    },
+    {
+      name: "Cheddar Cheese",
+      calories: 402,
+      protein: 25,
+      carbs: 1.3,
+      fats: 33,
+    },
+    {
+      name: "Greek Yogurt (Plain, 0% Fat)",
+      calories: 59,
+      protein: 10,
+      carbs: 3.6,
+      fats: 0.4,
+    },
+    {
+      name: "Butter",
+      calories: 717,
+      protein: 0.9,
+      carbs: 0.1,
+      fats: 81,
+    },
+    {
+      name: "Cottage Cheese (Low-Fat)",
+      calories: 98,
+      protein: 11,
+      carbs: 3.4,
+      fats: 4.3,
+    },
+    // Nuts and Seeds
+    {
+      name: "Almonds",
+      calories: 579,
+      protein: 21,
+      carbs: 21.6,
+      fats: 49,
+    },
+    {
+      name: "Peanuts",
+      calories: 567,
+      protein: 25.8,
+      carbs: 16.1,
+      fats: 49.2,
+    },
+    {
+      name: "Walnuts",
+      calories: 654,
+      protein: 15,
+      carbs: 13.7,
+      fats: 65,
+    },
+    {
+      name: "Chia Seeds",
+      calories: 486,
+      protein: 16.5,
+      carbs: 42.1,
+      fats: 30.7,
+    },
+    {
+      name: "Sunflower Seeds",
+      calories: 584,
+      protein: 20.8,
+      carbs: 20,
+      fats: 51,
+    },
+    {
+      name: "Cashews",
+      calories: 553,
+      protein: 18,
+      carbs: 30,
+      fats: 44,
+    },
+    // More grains, beans, oils, and foods can be added as needed
+  ];
+  
